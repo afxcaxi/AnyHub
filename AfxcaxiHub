@@ -2506,10 +2506,10 @@ end
 --------------------------------------------------------------------------------------------------------------------------------------------
 --Create Tabs
 local Farming = Tabs.Main:AddSection("Farming")
-local listfastattack = {'Normal Attack(Should Use)','Kicked(Fast)','Kicked(Super)'}
+local listfastattack = {'Farm Mastery','Fast Attack','Super Attack'}
 
     local DropdownDelayAttack = Tabs.Main:AddDropdown("DropdownDelayAttack", {
-        Title = "Select Fast Attack",
+        Title = "Fast Attack",
         Values = listfastattack,
         Multi = false,
         Default = 1,
@@ -2517,12 +2517,12 @@ local listfastattack = {'Normal Attack(Should Use)','Kicked(Fast)','Kicked(Super
     DropdownDelayAttack:SetValue("Fast Attack")
     DropdownDelayAttack:OnChanged(function(Value)
     _G.FastAttackAfxcaxi_Mode = Value
-	if _G.FastAttackAfxcaxi_Mode == "Fast Attack" then
-		_G.Fast_Delay = 0.17
-	elseif _G.FastAttackAfxcaxi_Mode == "Normal Attack" then
-		_G.Fast_Delay = 0.25
-	elseif _G.FastAttackAfxcaxi_Mode == "Super Fast Attack" then
-		_G.Fast_Delay = 0.05
+	if _G.FastAttackAfxcaxi_Mode == "Normal Attack(Should Use)" then
+		_G.Fast_Delay = 1
+	elseif _G.FastAttackAfxcaxi_Mode == "Kicked(Fast)" then
+		_G.Fast_Delay = 0,4
+	elseif _G.FastAttackAfxcaxi_Mode == "Kicked(Super)" then
+		_G.Fast_Delay = 0.2
 	end
 end)
 
