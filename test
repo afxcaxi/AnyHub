@@ -21,7 +21,7 @@ local InterfaceManager =
     loadstring(
     game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua")
 )()
-local Window = OrionLib:MakeWindow({Name = "AFX Hub", HidePremium = false, IntroText = "AFX Hub Library", SaveConfig = true, ConfigFolder = "AFX Hub"})
+local Window = OrionLib:MakeWindow("IntroText = "AFX Hub Library")
 ----------------------------------------------------------------------------------------------------------------------------------------------
 local Window =
     Fluent:CreateWindow(
