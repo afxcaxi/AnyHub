@@ -1,0 +1,84 @@
+_G.AutoBountySetting = {
+    ["Key"] = "", -- Your key get from https://alchemyhub.xyz/key
+    ["General"] = {
+        ["Team"] = "Pirates", -- Pirates or Marines
+        ["Bypass Teleport"] = true
+    },
+    ["Booster"] = {
+        ["FPS Boost"] = true, 
+        ["White Screen"] = true
+    },
+    ["Race"] = {
+        ["V3"] = true,
+        ["V4"] = true,
+    },
+    ["Melee"] = {
+        ["Enable"] = true,
+        ["Delay"] = 3,
+        ["Skill Z"] = {
+            ["Enable"] = true,
+            ["Hold Time"] = 0
+        },
+        ["Skill X"] = {
+            ["Enable"] = true,
+            ["Hold Time"] = 0
+        },
+        ["Skill C"] = {
+            ["Enable"] = true,
+            ["Hold Time"] = 0
+        }
+    },
+    ["Sword"] = {
+        ["Enable"] = true,
+        ["Delay"] = 1.5,
+        ["Skill Z"] = {
+            ["Enable"] = true,
+            ["Hold Time"] = 0
+        },
+        ["Skill X"] = {
+            ["Enable"] = true,
+            ["Hold Time"] = 0
+        }
+    },
+    ["Fruits"] = {
+        ["Enable"] = true,
+        ["Delay"] = 3,
+        ["Skill Z"] = {
+            ["Enable"] = true,
+            ["Hold Time"] = 0
+        },
+        ["Skill X"] = {
+            ["Enable"] = true,
+            ["Hold Time"] = 0
+        },
+        ["Skill C"] = {
+            ["Enable"] = true,
+            ["Hold Time"] = 0
+        },
+        ["Skill V"] = {
+            ["Enable"] = true,
+            ["Hold Time"] = 0
+        }
+    },
+    ["Gun"] = {
+        ["Enable"] = true,
+        ["Delay"] = 1,
+        ["Skill Z"] = {
+            ["Enable"] = true,
+            ["Hold Time"] = 0
+        },
+        ["Skill X"] = {
+            ["Enable"] = true,
+            ["Hold Time"] = 0
+        }
+    },
+    ["Skip"] = {
+        ["Race V4"] = false,
+        ["Fruits"] = false
+    },
+    ["Webhook"] = {
+        ["Enable"] = false,  -- Use webhook
+        ["Url"] = "https://discord.com/api/webhooks/000000/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" -- Webhook Url
+    }
+}
+v=2;loadstring(game:HttpGet("https://alchemyhub.xyz/v2"))()
