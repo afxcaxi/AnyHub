@@ -2512,17 +2512,17 @@ local listattack = {'Normal Attack','Fast Attack','Super Attack'}
         Title = "Normal Attack",
         Values = listfastattack,
         Multi = false,
-        Default = 7,
+        Default = 1,
     })
     DropdownDelayAttack:SetValue("Fast Attack")
     DropdownDelayAttack:OnChanged(function(Value)
     _G.FastAttackAfxcaxi_Mode = Value
 	if _G.FastAttackAfxcaxi_Mode == "Normal Attack(Should Use)" then
-		_G.Fast_Delay = 7
+		_G.Fast_Delay = 3
 	elseif _G.FastAttackAfxcaxi_Mode == "Kicked(Fast)" then
-		_G.Fast_Delay = 6
+		_G.Fast_Delay = 2
 	elseif _G.FastAttackAfxcaxi_Mode == "Kicked(Super)" then
-		_G.Fast_Delay = 5
+		_G.Fast_Delay = 1
 	end
 end)
 
