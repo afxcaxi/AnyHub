@@ -2520,9 +2520,9 @@ local listfastattack = {'Farm Mastery','Fast Attack','Super Attack'}
 	if _G.FastAttackAfxcaxi_Mode == "Normal Attack(Should Use)" then
 		_G.Fast_Delay = 1
 	elseif _G.FastAttackAfxcaxi_Mode == "Kicked(Fast)" then
-		_G.Fast_Delay = 0,4
+		_G.Fast_Delay = 0,777
 	elseif _G.FastAttackAfxcaxi_Mode == "Kicked(Super)" then
-		_G.Fast_Delay = 0.2
+		_G.Fast_Delay = 0.555
 	end
 end)
 
