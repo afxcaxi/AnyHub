@@ -5316,48 +5316,48 @@ do
 
     if First_Sea then
         tableBoss = {
-            "DauCoGhe Raid Boss [Lv. 7000]",
-            "The Gorilla King",
-            "Bobby",
-            "Yeti",
-            "Mob Leader",
-            "Vice Admiral",
-            "Warden",
-            "Chief Warden",
-            "Swan",
-            "Magma Admiral",
-            "Fishman Lord",
-            "Wysper",
-            "Thunder God",
-            "Cyborg",
-            "Saber Expert"
+            "IDK Raid Boss [Lv. 7000]",
+            "The Gorilla King Boss",
+            "Bobby Boss",
+            "Yeti Boss",
+            "Mob Leader Boss",
+            "Vice Admiral Boss",
+            "Warden Boss",
+            "Chief Warden Boss",
+            "Swan Boss",
+            "Magma Admiral Boss",
+            "Fishman Lord Boss",
+            "Wysper Boss",
+            "Thunder God Boss",
+            "Cyborg Boss",
+            "Saber Expert Boss"
         }
     elseif Second_Sea then
         tableBoss = {
-            "DauCoGhe Raid Boss [Lv. 8000]",
-            "Diamond",
-            "Jeremy",
-            "Fajita",
-            "Don Swan",
-            "Smoke Admiral",
-            "Cursed Captain",
-            "Darkbeard",
-            "Order",
-            "Awakened Ice Admiral",
-            "Tide Keeper"
+            "IDK Raid Boss [Lv. 8000]",
+            "Diamond Boss",
+            "Jeremy Boss",
+            "Fajita Boss",
+            "Don Swan Boss",
+            "Smoke Admiral Boss",
+            "Cursed Captain Boss",
+            "Darkbeard Boss",
+            "Order Boss",
+            "Awakened Ice Admiral Boss",
+            "Tide Keeper Boss"
         }
     elseif Third_Sea then
         tableBoss = {
-            "DauCoGhe Raid Boss [Lv. 9000]",
-            "Stone",
-            "Island Empress",
-            "Kilo Admiral",
-            "Captain Elephant",
-            "Beautiful Pirate",
-            "rip_indra True Form",
-            "Longma",
-            "Soul Reaper",
-            "Cake Queen"
+            "IDK Raid Boss [Lv. 9000]",
+            "Stone Boss",
+            "Island Empress Boss",
+            "Kilo Admiral Boss",
+            "Captain Elephant Boss",
+            "Beautiful Pirate Boss",
+            "rip_indra True Form Boss",
+            "Longma Boss",
+            "Soul Reaper Boss",
+            "Cake Queen Boss"
         }
     end
 
