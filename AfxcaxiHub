@@ -5,10 +5,10 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
     Title = "AFX Hub",
-    SubTitle = "Creator By AfxcaxiRoblox",
+    SubTitle = "Skid And Setup By AfxcaxiRoblox",
     TabWidth = 160,
     Size = UDim2.fromOffset(530, 350),
-    Acrylic = true,
+    Acrylic = false,
     Theme = "Amethyst",
     MinimizeKey = Enum.KeyCode.End
 })
@@ -2502,7 +2502,7 @@ if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Respawn
 	game:GetService("ReplicatedStorage").Effect.Container.Respawn:Destroy()
 end
 --------------------------------------------------------------------------------------------------------------------------------------------
--- Hehe
+-- 
 --------------------------------------------------------------------------------------------------------------------------------------------
 --Create Tabs
 local Farming = Tabs.Main:AddSection("Farming")
@@ -2512,17 +2512,17 @@ local listfastattack = {'Normal Attack','Fast Attack','Super Fast Attack'}
         Title = "Normal Attack",
         Values = listfastattack,
         Multi = false,
-        Default = 0,4
+        Default = 1
     })
     DropdownDelayAttack:SetValue("Fast Attack")
     DropdownDelayAttack:OnChanged(function(Value)
     _G.FastAttackAfxcaxi_Mode = Value
-	if _G.FastAttackAfxcaxi_Mode == "Fast Attack" then
-		_G.Fast_Delay = 0,4
-	elseif _G.FastAttackAfxcaxi_Mode == "Normal Attack" then
-		_G.Fast_Delay = 0,4
-	elseif _G.FastAttackAfxcaxi_Mode == "Super Fast Attack" then
-		_G.Fast_Delay = 0,4
+	if _G.FastAttackAfxcaxi_Mode == "Fast Attack1" then
+		_G.Fast_Delay = 1
+	elseif _G.FastAttackAfxcaxi_Mode == "Normal Attack2" then
+		_G.Fast_Delay = 1
+	elseif _G.FastAttackAfxcaxi_Mode == "Super Fast Attack3" then
+		_G.Fast_Delay = 1
 	end
 end)
 
