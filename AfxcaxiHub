@@ -2518,11 +2518,11 @@ local listfastattack = {'Normal Attack','Fast Attack','Super Fast Attack'}
     DropdownDelayAttack:OnChanged(function(Value)
     _G.FastAttackAfxcaxi_Mode = Value
 	if _G.FastAttackAfxcaxi_Mode == "Fast Attack" then
-		_G.Fast_Delay = 3
+		_G.Fast_Delay = 0,3
 	elseif _G.FastAttackAfxcaxi_Mode == "Normal Attack" then
-		_G.Fast_Delay = 2
+		_G.Fast_Delay = 0,275
 	elseif _G.FastAttackAfxcaxi_Mode == "Super Fast Attack" then
-		_G.Fast_Delay = 1
+		_G.Fast_Delay = 0,15
 	end
 end)
 
