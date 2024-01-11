@@ -3,22 +3,6 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 ----------------------------------------------------------------------------------------------------------------------------------------------
-spawn(function() 
-    repeat
-        task.wait()
-    until game:IsLoaded()
-    repeat
-        task.wait()
-    until game.Players
-    repeat
-        task.wait()
-    until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
-    wait(1.5)
-    require(game.ReplicatedStorage.Notification).new("<Color=Red>Chào Mừng Tới Afxcaxi Hub<Color=/>"):Display()
-    require(game.ReplicatedStorage.Notification).new("<Color=Blue>Discord : Tham Gia Discord Của AfxcaxiRoblox Ðể Có Thông Tin Mới Nhất Nhé <Color=/>"):Display()
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Cảm Ơn Các Bạn Đã Sử Dụng Script Của Afxcaxi<Color=/>"):Display()
-end)
-
 local Window = Fluent:CreateWindow({
     Title = "Afxcaxi Hub",
     SubTitle = "Blox Fruit Script",
