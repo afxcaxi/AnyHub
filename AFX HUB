@@ -4103,21 +4103,19 @@ do
             Values = listfastattack,
             Multi = false,
             Default = 1
-        }
-    )
+     })
     DropdownDelayAttack:SetValue("Fast Attack")
-    DropdownDelayAttack:OnChanged(
-        function(Value)
-            _G.FastAttackFaiFao_Mode = Value
-            if _G.FastAttackFaiFao_Mode == "Fast Attack" then
-                _G.Fast_Delay = 0.333
-            elseif _G.FastAttackFaiFao_Mode == "Normal Attack" then
-                _G.Fast_Delay = 0.444
-            elseif _G.FastAttackFaiFao_Mode == "Super Fast Attack" then
-                _G.Fast_Delay = 0.175
-            end
-        end
-    )
+    DropdownDelayAttack:OnChanged(function(Value)
+    _G.FastAttackFaiFao_Mode = Value
+	if _G.FastAttackFaiFao_Mode == "Fast Attack" then
+		_G.Fast_Delay = 0.17
+	elseif _G.FastAttackFaiFao_Mode == "Normal Attack" then
+		_G.Fast_Delay = 0.25
+	elseif _G.FastAttackFaiFao_Mode == "Super Fast Attack" then
+		_G.Fast_Delay = 0.05
+	end
+end)
+
 
     local DropdownSelectWeapon =
         Tabs.Main:AddDropdown(
