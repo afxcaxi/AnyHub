@@ -26,7 +26,7 @@ local Window =
     Fluent:CreateWindow(
     {
         Title = "Afxcaxi Hub",
-        SubTitle = "by Afxcaxi",
+        SubTitle = "Skid And Setup By AfxcaxiRoblox",
         TabWidth = 160,
         Size = UDim2.fromOffset(530, 350),
         Acrylic = true,
@@ -52,13 +52,13 @@ local Options = Fluent.Options
 do
     Tabs.Discord:AddButton(
         {
-            Title = "Copy Discord Afxcaxi",
-            Description = "https://discord.gg/Zv2RDy2V66",
+            Title = "Copy Discord AfxcaxiRoblox",
+            Description = "https://discord.gg/yZDRPEVXtz",
             Callback = function()
-                setclipboard("https://discord.gg/Zv2RDy2V66")
+                setclipboard("https://discord.gg/yZDRPEVXtz")
                 Fluent:Notify(
                     {
-                        Title = "Afxcaxi Hub",
+                        Title = "AFX Hub",
                         Content = "Copied!",
                         SubContent = "", -- Optional
                         Duration = 5 -- Set to nil to make the notification not disappear
@@ -69,13 +69,13 @@ do
     )
     Tabs.Discord:AddButton(
         {
-            Title = "Copy Discord Afxcaxi",
-            Description = "https://discord.gg/Zv2RDy2V66",
+            Title = "Copy Youtube AfxcaxiRoblox",
+            Description = "https://www.youtube.com/channel/UCppExFlPUorGZNKXp8GFtmw",
             Callback = function()
                 setclipboard("https://www.youtube.com/channel/UCppExFlPUorGZNKXp8GFtmw")
                 Fluent:Notify(
                     {
-                        Title = "Afxcaxi Hub",
+                        Title = "AFX Hub",
                         Content = "Copied!",
                         SubContent = "", -- Optional
                         Duration = 5 -- Set to nil to make the notification not disappear
@@ -4071,7 +4071,7 @@ do
     ToggleButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
     ToggleButton.Size = UDim2.new(0, 50, 0, 50)
     ToggleButton.Font = Enum.Font.SourceSans
-    ToggleButton.Text = "Open|Close"
+    ToggleButton.Text = "AfxcaxiRoblox"
     ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
     ToggleButton.TextSize = 14.000
     ToggleButton.Draggable = true
@@ -4110,11 +4110,11 @@ do
         function(Value)
             _G.FastAttackFaiFao_Mode = Value
             if _G.FastAttackFaiFao_Mode == "Fast Attack" then
-                _G.Fast_Delay = 0.
+                _G.Fast_Delay = 0.15
             elseif _G.FastAttackFaiFao_Mode == "Normal Attack" then
                 _G.Fast_Delay = 0.175
             elseif _G.FastAttackFaiFao_Mode == "Super Fast Attack" then
-                _G.Fast_Delay = 0.05
+                _G.Fast_Delay = 0.09
             end
         end
     )
