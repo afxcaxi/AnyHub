@@ -9,9 +9,9 @@ spawn(function()
         task.wait()
     until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
     wait(1.5)
-    require(game.ReplicatedStorage.Notification).new("<Color=Red>Chào Mừng Đến Với Afxcaxi Hub<Color=/>"):Display()
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Discord : Tham Gia Discord Của AfxcaxiRoblox Để Có Thông Tin Mới Nhất Nhé <Color=/>"):Display()
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Cảm Ơn Đã Sử Dụng Script Của Tôi<Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Red>Chào M?ng Ð?n V?i Afxcaxi Hub<Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Discord : Tham Gia Discord C?a AfxcaxiRoblox Ð? Có Thông Tin M?i Nh?t Nhé <Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>C?m On Ðã S? D?ng Script C?a Tôi<Color=/>"):Display()
 end)
 ----------------------------------------------------------------------------------------------------------------------------------------------
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
@@ -4110,11 +4110,11 @@ do
         function(Value)
             _G.FastAttackFaiFao_Mode = Value
             if _G.FastAttackFaiFao_Mode == "Fast Attack" then
-                _G.Fast_Delay = 0.222
+                _G.Fast_Delay = 0.475
             elseif _G.FastAttackFaiFao_Mode == "Normal Attack" then
-                _G.Fast_Delay = 0.333
+                _G.Fast_Delay = 0.666
             elseif _G.FastAttackFaiFao_Mode == "Super Fast Attack" then
-                _G.Fast_Delay = 0.09
+                _G.Fast_Delay = 0.275
             end
         end
     )
@@ -5617,7 +5617,7 @@ do
     )
 
     if Third_Sea then
-        local RoughSea = Tabs.Main:AddSection("🦊 Kitsune 🦊")
+        local RoughSea = Tabs.Main:AddSection("?? Kitsune ??")
 
         local ToggleEspKitsune =
             Tabs.Main:AddToggle("ToggleEspKitsune", {Title = "Esp Kitsune Island", Default = false})
