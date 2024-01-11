@@ -4110,9 +4110,9 @@ do
         function(Value)
             _G.FastAttackFaiFao_Mode = Value
             if _G.FastAttackFaiFao_Mode == "Fast Attack" then
-                _G.Fast_Delay = 0.15
+                _G.Fast_Delay = 0.222
             elseif _G.FastAttackFaiFao_Mode == "Normal Attack" then
-                _G.Fast_Delay = 0.175
+                _G.Fast_Delay = 0.333
             elseif _G.FastAttackFaiFao_Mode == "Super Fast Attack" then
                 _G.Fast_Delay = 0.09
             end
