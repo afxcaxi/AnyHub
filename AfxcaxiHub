@@ -9,7 +9,7 @@ local Window = Fluent:CreateWindow({
     TabWidth = 160,
     Size = UDim2.fromOffset(530, 350),
     Acrylic = true,
-    Theme = "Aqua",
+    Theme = "Amethyst",
     MinimizeKey = Enum.KeyCode.End
 })
 local Tabs = {
@@ -2506,10 +2506,10 @@ end
 --------------------------------------------------------------------------------------------------------------------------------------------
 --Create Tabs
 local Farming = Tabs.Main:AddSection("Farming")
-local listattack = {'Normal Attack','Fast Attack','Super Attack'}
+local listfastattack = {'Normal Attack(Should Use)','Kicked(Fast)','Kicked(Super)'}
 
     local DropdownDelayAttack = Tabs.Main:AddDropdown("DropdownDelayAttack", {
-        Title = "Normal Attack",
+        Title = "Select Fast Attack",
         Values = listfastattack,
         Multi = false,
         Default = 1,
@@ -2517,12 +2517,12 @@ local listattack = {'Normal Attack','Fast Attack','Super Attack'}
     DropdownDelayAttack:SetValue("Fast Attack")
     DropdownDelayAttack:OnChanged(function(Value)
     _G.FastAttackAfxcaxi_Mode = Value
-	if _G.FastAttackAfxcaxi_Mode == "Normal Attack(Should Use)" then
-		_G.Fast_Delay = 3
-	elseif _G.FastAttackAfxcaxi_Mode == "Kicked(Fast)" then
-		_G.Fast_Delay = 2
-	elseif _G.FastAttackAfxcaxi_Mode == "Kicked(Super)" then
-		_G.Fast_Delay = 1
+	if _G.FastAttackAfxcaxi_Mode == "Fast Attack" then
+		_G.Fast_Delay = 0.17
+	elseif _G.FastAttackAfxcaxi_Mode == "Normal Attack" then
+		_G.Fast_Delay = 0.25
+	elseif _G.FastAttackAfxcaxi_Mode == "Super Fast Attack" then
+		_G.Fast_Delay = 0.05
 	end
 end)
 
@@ -3527,7 +3527,7 @@ local boss = Tabs.Main:AddSection("Boss Farm")
       end)
 
       if Third_Sea then
-      local RoughSea = Tabs.Main:AddSection("🦊 Kitsune 🦊")
+      local RoughSea = Tabs.Main:AddSection("?? Kitsune ??")
 
 
       local ToggleEspKitsune = Tabs.Main:AddToggle("ToggleEspKitsune", {Title = "Esp Kitsune Island", Default = false })
