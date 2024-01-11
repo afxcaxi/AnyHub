@@ -5,10 +5,10 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
     Title = "AFX Hub",
-    SubTitle = "Blox Fruit Script",
+    SubTitle = "Creator By AfxcaxiRoblox",
     TabWidth = 160,
     Size = UDim2.fromOffset(530, 350),
-    Acrylic = false,
+    Acrylic = true,
     Theme = "Amethyst",
     MinimizeKey = Enum.KeyCode.End
 })
@@ -2520,7 +2520,7 @@ local listfastattack = {'Normal Attack','Fast Attack','Super Fast Attack'}
 	if _G.FastAttackAfxcaxi_Mode == "Fast Attack" then
 		_G.Fast_Delay = 0,175
 	elseif _G.FastAttackAfxcaxi_Mode == "Normal Attack" then
-		_G.Fast_Delay = 1
+		_G.Fast_Delay = 0,275
 	elseif _G.FastAttackAfxcaxi_Mode == "Super Fast Attack" then
 		_G.Fast_Delay = 0,15
 	end
