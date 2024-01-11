@@ -18,13 +18,14 @@ spawn(function()
     require(game.ReplicatedStorage.Notification).new("<Color=Blue>Discord : Tham Gia Discord Của AfxcaxiRoblox Ðể Có Thông Tin Mới Nhất Nhé <Color=/>"):Display()
     require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Cảm Ơn Các Bạn Đã Sử Dụng Script Của Afxcaxi<Color=/>"):Display()
 end)
+
 local Window = Fluent:CreateWindow({
     Title = "Afxcaxi Hub",
     SubTitle = "Blox Fruit Script",
     TabWidth = 160,
     Size = UDim2.fromOffset(530, 350),
     Acrylic = false,
-    Theme = "Dark",
+    Theme = "Aqua",
     MinimizeKey = Enum.KeyCode.End
 })
 local Tabs = {
