@@ -5,7 +5,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
     Title = "AFX Hub",
-    SubTitle = "Skid And Setup By AfxcaxiRoblox",
+    SubTitle = "Setup And Skid By AfxcaxiRoblox",
     TabWidth = 160,
     Size = UDim2.fromOffset(530, 350),
     Acrylic = false,
@@ -13,17 +13,17 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.End
 })
 local Tabs = {
-    Main = Window:AddTab({ Title = "Main", Icon = "turtle" }),
-    Setting = Window:AddTab({ Title = "Setting", Icon = "turtle" }),
-    Stats = Window:AddTab({ Title = "Stats", Icon = "turtlee" }),
-    Player = Window:AddTab({ Title = "Player", Icon = "turtle" }),
-    Teleport = Window:AddTab({ Title = "Island", Icon = "turtle" }),
-    Fruit = Window:AddTab({ Title = "Fruit", Icon = "turtle" }),
-    Raid = Window:AddTab({ Title = "Raid", Icon = "turtle" }),
-    Race = Window:AddTab({ Title = "Race V4", Icon = "turtle" }),
-    Shop = Window:AddTab({ Title = "Shop", Icon = "turtle" }),
-	Misc = Window:AddTab({ Title = "Misc", Icon = "turtle" }),
-    Hop = Window:AddTab({ Title = "Hop", Icon = "turtle" }),
+    Main = Window:AddTab({ Title = "Main", Icon = "home" }),
+    Setting = Window:AddTab({ Title = "Setting", Icon = "settings" }),
+    Stats = Window:AddTab({ Title = "Stats", Icon = "plus-circle" }),
+    Player = Window:AddTab({ Title = "Player", Icon = "baby" }),
+    Teleport = Window:AddTab({ Title = "Island", Icon = "palmtree" }),
+    Fruit = Window:AddTab({ Title = "Fruit", Icon = "cherry" }),
+    Raid = Window:AddTab({ Title = "Raid", Icon = "swords" }),
+    Race = Window:AddTab({ Title = "Race V4", Icon = "chevrons-right" }),
+    Shop = Window:AddTab({ Title = "Shop", Icon = "shopping-cart" }),
+	Misc = Window:AddTab({ Title = "Misc", Icon = "list-plus" }),
+    Hop = Window:AddTab({ Title = "Hop", Icon = "wifi" }),
 }
 local Options = Fluent.Options
 do
@@ -2486,7 +2486,7 @@ ToggleButton.BorderSizePixel = 0
 ToggleButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 ToggleButton.Size = UDim2.new(0, 50, 0, 50)
 ToggleButton.Font = Enum.Font.SourceSans
-ToggleButton.Text = "Afxcaxi"
+ToggleButton.Text = "Open|Close"
 ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 ToggleButton.TextSize = 14.000
 ToggleButton.Draggable = true
@@ -2502,27 +2502,27 @@ if game:GetService("ReplicatedStorage").Effect.Container:FindFirstChild("Respawn
 	game:GetService("ReplicatedStorage").Effect.Container.Respawn:Destroy()
 end
 --------------------------------------------------------------------------------------------------------------------------------------------
--- 
+-- Hehe
 --------------------------------------------------------------------------------------------------------------------------------------------
 --Create Tabs
 local Farming = Tabs.Main:AddSection("Farming")
 local listfastattack = {'Normal Attack','Fast Attack','Super Fast Attack'}
 
     local DropdownDelayAttack = Tabs.Main:AddDropdown("DropdownDelayAttack", {
-        Title = "Normal Attack",
+        Title = "Select Fast Attack",
         Values = listfastattack,
         Multi = false,
-        Default = 3
+        Default = 1,
     })
     DropdownDelayAttack:SetValue("Fast Attack")
     DropdownDelayAttack:OnChanged(function(Value)
-    _G.FastAttackAfxcaxi_Mode = Value
-	if _G.FastAttackAfxcaxi_Mode == "Fast Attack1" then
-		_G.Fast_Delay = 3
-	elseif _G.FastAttackAfxcaxi_Mode == "Normal Attack2" then
-		_G.Fast_Delay = 3
-	elseif _G.FastAttackAfxcaxi_Mode == "Super Fast Attack3" then
-		_G.Fast_Delay = 3
+    _G.FastAttackFaiFao_Mode = Value
+	if _G.FastAttackFaiFao_Mode == "Fast Attack" then
+		_G.Fast_Delay = 0.17
+	elseif _G.FastAttackFaiFao_Mode == "Normal Attack" then
+		_G.Fast_Delay = 0.25
+	elseif _G.FastAttackFaiFao_Mode == "Super Fast Attack" then
+		_G.Fast_Delay = 0.05
 	end
 end)
 
@@ -3527,7 +3527,7 @@ local boss = Tabs.Main:AddSection("Boss Farm")
       end)
 
       if Third_Sea then
-      local RoughSea = Tabs.Main:AddSection("?? Kitsune ??")
+      local RoughSea = Tabs.Main:AddSection("🦊 Kitsune 🦊")
 
 
       local ToggleEspKitsune = Tabs.Main:AddToggle("ToggleEspKitsune", {Title = "Esp Kitsune Island", Default = false })
@@ -4586,17 +4586,17 @@ local SettingFarm = Tabs.Setting:AddSection("Setting Farming")
  local ToggleFastAttack = Tabs.Setting:AddToggle("ToggleFastAttack", {Title = " Enable Fast Attack", Default = true })
 
     ToggleFastAttack:OnChanged(function(Value)
-     _G.FastAttackAfxcaxi = Value
+     _G.FastAttackFaiFao = Value
     end)
     Options.ToggleFastAttack:SetValue(true)
 
 spawn(function()
 	while wait(0.4) do
 		pcall(function()
-			if _G.FastAttackAfxcaxi then
+			if _G.FastAttackFaiFao then
 				repeat wait(_G.Fast_Delay)
 					AttackNoCD()
-				until not _G.FastAttackAfxcaxi
+				until not _G.FastAttackFaiFao
 			end
 		end)
 	end
@@ -6936,7 +6936,7 @@ spawn(function()
         elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
             Hop()
             Fluent:Notify({
-                Title = "Afxcaxi Hub",
+                Title = "Fai Fao Hub",
                 Content = "Turn Off Find Full Moon...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
@@ -6944,7 +6944,7 @@ spawn(function()
         elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
             Hop()
             Fluent:Notify({
-                Title = "Afxcaxi Hub",
+                Title = "Fai Fao Hub",
                 Content = "Hop...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
@@ -6952,7 +6952,7 @@ spawn(function()
         elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
             Hop()
             Fluent:Notify({
-                Title = "Afxcaxi Hub",
+                Title = "Fai Fao Hub",
                 Content = "Hop...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
