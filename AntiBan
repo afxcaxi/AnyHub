@@ -1,4 +1,20 @@
 game.Players.LocalPlayer.Name = "UsquKopemsn"
+wait(1)
+spawn(function() 
+    repeat
+        task.wait()
+    until game:IsLoaded()
+    repeat
+        task.wait()
+    until game.Players
+    repeat
+        task.wait()
+    until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
+    wait(1.5)
+    require(game.ReplicatedStorage.Notification).new("<Color=Red> Welcome To AfxcaxiRoblox Script <Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Discord : Join AfxcaxiRoblox's Discord to Get the Latest Information <Color=/>"):Display()
+end)
+game.Players.LocalPlayer.Name = "UsquKopemsn"
 game.Players.LocalPlayer.Name = "UsquKopemsn"
 game.Players.LocalPlayer.Name = "UsquKopemsn"
 wait(2)
@@ -25,7 +41,7 @@ function AntiBan()
         end
     end
     AntiBan()
-wait(1)
+wait(2)
 game.Players.LocalPlayer.Name = "UsquKopemsn"
 game.Players.LocalPlayer.Name = "UsquKopemsn"
 game.Players.LocalPlayer.Name = "UsquKopemsn"
