@@ -1,3 +1,18 @@
+spawn(function() 
+    repeat
+        task.wait()
+    until game:IsLoaded()
+    repeat
+        task.wait()
+    until game.Players
+    repeat
+        task.wait()
+    until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
+    wait(1.5)
+    require(game.ReplicatedStorage.Notification).new("<Color=Red> Welcome To Sukuna Hub <Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Discord : Join AfxcaxiRoblox's Discord to Get the Latest Information <Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Discord : Thank You For Using Sukuna Hub <Color=/>"):Display()
+end)
 assert(getrawmetatable)
     grm = getrawmetatable(game)
     setreadonly(grm, false)
@@ -53,19 +68,5 @@ function AntiBan()
         end
     end
     AntiBan()
-wait(.1)
-spawn(function() 
-    repeat
-        task.wait()
-    until game:IsLoaded()
-    repeat
-        task.wait()
-    until game.Players
-    repeat
-        task.wait()
-    until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
-    wait(1.5)
-    require(game.ReplicatedStorage.Notification).new("<Color=Red> Welcome To Sukuna Hub <Color=/>"):Display()
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Discord : Join AfxcaxiRoblox's Discord to Get the Latest Information <Color=/>"):Display()
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Discord : Thank You For Using Sukuna Hub <Color=/>"):Display()
-end)
+print("Hello I'm AfxcaxiRoblox")
+
