@@ -16,9 +16,22 @@ end)
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
-local L_1_ = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local L_2_ = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
-local L_3_ = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/EnverstNgau/GuiLibrary/main/MetMoi.lua"))()
+local Win = Library:CreateWindow('            Cracked Trash Gui   ') 
+local Tab  = Win:CreateTab('Main')
+local TestL = Tab:Label("Aye On Top")
+Tab:Button("Reset If Got Error","Reset By Destroy Your Head",function()
+    game.Players.LocalPlayer.Character.Head:Destroy()
+end)
+Tab:TextBox("Test","Test",function(v)
+    print(v)
+end)
+Tab:Slider("Slider","NGu",1,100,45,function(value)
+    _G.Kill_At = value
+end)
+Tab:DropDown("DropDown","Test",{"8","6"},"6",function(v)
+    print(v)
+end)
 ----------------------------------------------------------------------------------------------------------------------------------------------
 local L_4_ = L_1_:CreateWindow({
 	Title = "Rimus Hub",
