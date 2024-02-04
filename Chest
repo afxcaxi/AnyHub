@@ -165,3 +165,186 @@ spawn(function()
 		end
 	end
 end)
+-- ui
+
+local AfxcaxiRoblox = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local UIGradient = Instance.new("UIGradient")
+local Time = Instance.new("TextLabel")
+local TenHub = Instance.new("TextLabel")
+local BELI = Instance.new("TextLabel")
+local Hop = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local UIStroke_2 = Instance.new("UIStroke")
+local UIGradient_2 = Instance.new("UIGradient")
+local Stop = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UIStroke_3 = Instance.new("UIStroke")
+local UIGradient_3 = Instance.new("UIGradient")
+local Cridet = Instance.new("TextLabel")
+
+AfxcaxiRoblox.Name = "AfxcaxiRoblox"
+AfxcaxiRoblox.Parent = game.StarterGui.ScreenGui
+AfxcaxiRoblox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AfxcaxiRoblox.BackgroundTransparency = 0.400
+AfxcaxiRoblox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AfxcaxiRoblox.BorderSizePixel = 0
+AfxcaxiRoblox.Position = UDim2.new(0.19878684, 0, 0.196126744, 0)
+AfxcaxiRoblox.Size = UDim2.new(0, 441, 0, 218)
+
+UICorner.CornerRadius = UDim.new(0, 13)
+UICorner.Parent = AfxcaxiRoblox
+
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Thickness = 2
+UIStroke.Parent = AfxcaxiRoblox
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 85, 255)), ColorSequenceKeypoint.new(0.25, Color3.fromRGB(0, 255, 0)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 255, 0)), ColorSequenceKeypoint.new(0.75, Color3.fromRGB(0, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(170, 0, 0))}
+UIGradient.Parent = UIStroke
+
+Time.Name = "Time"
+Time.Parent = AfxcaxiRoblox
+Time.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Time.BackgroundTransparency = 1.000
+Time.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Time.BorderSizePixel = 0
+Time.Position = UDim2.new(0.0158730168, 0, 0.449541271, 0)
+Time.Size = UDim2.new(0, 428, 0, 54)
+Time.Font = Enum.Font.PatrickHand
+Time.Text = "Time Eslaped"
+Time.TextColor3 = Color3.fromRGB(0, 0, 0)
+Time.TextScaled = true
+Time.TextSize = 14.000
+Time.TextWrapped = true
+Time.TextXAlignment = Enum.TextXAlignment.Left
+
+TenHub.Name = "TenHub"
+TenHub.Parent = AfxcaxiRoblox
+TenHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TenHub.BackgroundTransparency = 1.000
+TenHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TenHub.BorderSizePixel = 0
+TenHub.Position = UDim2.new(0, 0, -0.0366972461, 0)
+TenHub.Size = UDim2.new(0, 441, 0, 64)
+TenHub.Font = Enum.Font.PatrickHand
+TenHub.Text = "Hub Name: AFX Hub | Credits: AfxcaxiRoblox"
+TenHub.TextColor3 = Color3.fromRGB(0, 0, 0)
+TenHub.TextSize = 35.000
+
+BELI.Name = "BELI"
+BELI.Parent = AfxcaxiRoblox
+BELI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BELI.BackgroundTransparency = 1.000
+BELI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BELI.BorderSizePixel = 0
+BELI.Position = UDim2.new(0.0158730168, 0, 0.201834857, 0)
+BELI.Size = UDim2.new(0, 428, 0, 54)
+BELI.Font = Enum.Font.PatrickHand
+BELI.Text = "Current Beli"
+BELI.TextColor3 = Color3.fromRGB(0, 0, 0)
+BELI.TextScaled = true
+BELI.TextSize = 14.000
+BELI.TextWrapped = true
+BELI.TextXAlignment = Enum.TextXAlignment.Left
+
+Hop.Name = "Hop"
+Hop.Parent = AfxcaxiRoblox
+Hop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Hop.BackgroundTransparency = 0.950
+Hop.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Hop.BorderSizePixel = 0
+Hop.Position = UDim2.new(0.0294784587, 0, 0.697247684, 0)
+Hop.Size = UDim2.new(0, 200, 0, 50)
+Hop.Font = Enum.Font.PatrickHand
+Hop.Text = "Hop Sv"
+Hop.TextColor3 = Color3.fromRGB(0, 0, 0)
+Hop.TextSize = 30.000
+
+UICorner_2.CornerRadius = UDim.new(0, 15)
+UICorner_2.Parent = Hop
+
+UIStroke_2.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_2.Parent = Hop
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 85, 255)), ColorSequenceKeypoint.new(0.25, Color3.fromRGB(0, 255, 127)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 255, 0)), ColorSequenceKeypoint.new(0.75, Color3.fromRGB(85, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(170, 0, 0))}
+UIGradient_2.Parent = UIStroke_2
+
+Stop.Name = "Stop"
+Stop.Parent = AfxcaxiRoblox
+Stop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Stop.BackgroundTransparency = 0.950
+Stop.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Stop.BorderSizePixel = 0
+Stop.Position = UDim2.new(0.512471676, 0, 0.697247684, 0)
+Stop.Size = UDim2.new(0, 200, 0, 50)
+Stop.Font = Enum.Font.PatrickHand
+Stop.Text = "Stop Auto Chest"
+Stop.TextColor3 = Color3.fromRGB(0, 0, 0)
+Stop.TextSize = 30.000
+
+UICorner_3.CornerRadius = UDim.new(0, 15)
+UICorner_3.Parent = Stop
+
+UIStroke_3.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_3.Parent = Stop
+
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 85, 255)), ColorSequenceKeypoint.new(0.25, Color3.fromRGB(0, 255, 127)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 255, 0)), ColorSequenceKeypoint.new(0.75, Color3.fromRGB(85, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(170, 0, 0))}
+UIGradient_3.Parent = UIStroke_3
+
+Cridet.Name = "Cridet"
+Cridet.Parent = AfxcaxiRoblox
+Cridet.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cridet.BackgroundTransparency = 1.000
+Cridet.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Cridet.BorderSizePixel = 0
+Cridet.Position = UDim2.new(-0.0816326514, 0, 0.848623872, 0)
+Cridet.Size = UDim2.new(0, 200, 0, 50)
+Cridet.Font = Enum.Font.Unknown
+Cridet.Text = "Ui Design By Enverst"
+Cridet.TextColor3 = Color3.fromRGB(0, 0, 0)
+Cridet.TextSize = 20.000
+Stop.MouseButton1Down:Connect(function()
+    repeat task.wait()
+        getgenv().Auto_Chest = false
+    until getgenv().Auto_Chest == false
+end)
+Hop.MouseButton1Down:Connect(function()
+    Hop()
+end)
+function UpdateBeli()
+    BELI.Text = ("Current Beli:"..game:GetService("Players")["LocalPlayer"].Data.Beli.Value)
+end
+spawn(function()
+    while true do
+        wait(1)
+        TimeCount_S = TimeCount_S + 1
+        if TimeCount_S > 60 then
+            TimeCount_S = 0
+            TimeCount_M = TimeCount_M + 1
+        end
+        Time.Text = "Time Elapsed : "..TimeCount_M.." M - "..TimeCount_S.." S"
+    end
+    while wait() do
+        UpdateBeli()
+    end
+end)
+local function OSCPVU_fake_script()
+	local script = Instance.new('LocalScript', UIGradient)
+
+	local TweenService = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
+	local tween = TweenService:Create(script.Parent, tweeninfo, {Rotation = 360})
+	tween:Play()
+end
+coroutine.wrap(OSCPVU_fake_script)()
+local function LLWUZOX_fake_script()
+	local script = Instance.new('LocalScript', UIGradient_2)
+
+	local TweenService = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
+	local tween = TweenService:Create(script.Parent, tweeninfo, {Rotation = 360})
+	tween:Play()
+end
+coroutine.wrap(LLWUZOX_fake_script)()
+
