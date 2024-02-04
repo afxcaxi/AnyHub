@@ -318,10 +318,10 @@ end
 spawn(function()
     while true do
         wait(1)
-        TimeCount_S = TimeCount_S + 1
+TimeCount_S = TimeCount_S + 1
         if TimeCount_S > 60 then
             TimeCount_S = 0
-            TimeCount_M = TimeCount_M + 1
+            TimeCount_M = 0 + 1
         end
         Time.Text = "Time Elapsed : "..TimeCount_M.." M - "..TimeCount_S.." S"
     end
