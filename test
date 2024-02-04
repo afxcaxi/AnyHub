@@ -1,0 +1,350 @@
+getgenv().Team = "Marines"
+getgenv().Auto_Chest = true
+getgenv().Hop_Server = true
+
+if getgenv().Team == nil then
+	getgenv().Team = "Marines"
+end
+
+local GameLoadGui = Instance.new("Message", workspace)
+GameLoadGui.Text = 'Creator By: AfxcaxiRoblox'
+
+local function SelectTeam()
+    local ChooseTeam = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("ChooseTeam", true)
+    local UIController = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("UIController", true)
+
+    if UIController and ChooseTeam then
+        for i, v in pairs(getgc()) do
+            if type(v) == "function" and getfenv(v).script == UIController then
+                local constant = getconstants(v)
+                if constant[1] == getgenv().Team and #constant == 1 then
+                    v(getgenv().Team)
+                end
+            end
+        end
+    end
+end
+
+repeat
+    task.wait()
+    if not game.Players.LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam") then
+        break
+    end
+
+    local success, errorMessage = pcall(SelectTeam)
+    if not success then
+        warn("Error in SelectTeam function: " .. errorMessage)
+    end
+
+    wait(.1)
+until game.Players.LocalPlayer.Team ~= nil and game:IsLoaded()
+
+
+local function checkForGodsChalice()
+    local backpack = game.Players.LocalPlayer.Backpack
+    local character = game.Players.LocalPlayer.Character
+
+    return backpack:FindFirstChild("God's Chalice") or character:FindFirstChild("God's Chalice") or backpack:FindFirstChild("Fist of Darkness") or character:FindFirstChild("Fist of Darkness")
+end
+
+function Hop()
+	local PlaceID = game.PlaceId
+	local AllIDs = {}
+	local foundAnything = ""
+	local actualHour = os.date("!*t").hour
+	local Deleted = false
+
+	function TPReturner()
+		local Site
+		if foundAnything == "" then
+			Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+		else
+			Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+		end
+		local ID = ""
+		if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+			foundAnything = Site.nextPageCursor
+		end
+		local num = 0
+		for i, v in pairs(Site.data) do
+			local Possible = true
+			ID = tostring(v.id)
+			if tonumber(v.maxPlayers) > tonumber(v.playing) then
+				for _, Existing in pairs(AllIDs) do
+					if num ~= 0 then
+						if ID == tostring(Existing) then
+							Possible = false
+						end
+					else
+						if tonumber(actualHour) ~= tonumber(Existing) then
+							local delFile = pcall(function()
+								AllIDs = {}
+								table.insert(AllIDs, actualHour)
+							end)
+						end
+					end
+					num = num + 1
+				end
+				if Possible == true then
+					table.insert(AllIDs, ID)
+					pcall(function()
+						game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+					end)
+				end
+			end
+		end
+	end
+
+	while wait() do
+        if checkForGodsChalice() then
+            print("God's Chalice found. Stopping Hop.")
+            break
+        end
+
+        pcall(function()
+            TPReturner()
+            if foundAnything ~= "" then
+                TPReturner()
+            end
+        end)
+    end
+
+end
+
+ggez = function(suck)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = suck
+end
+
+xZcLuvHades = function(mydick)
+	for i = 1, 6 do
+		ggez(mydick)
+		game.Players.LocalPlayer.Character.Humanoid:ChangeState(14)
+	end
+end
+
+task.spawn(function()
+    while task.wait() do
+        if getgenv().Auto_Chest then
+            if checkForGodsChalice() then
+                getgenv().Auto_Chest = true
+                print("God's Chalice found. Stopping Auto_Chest.")
+                break
+            end
+
+            local success, errorMessage = pcall(function()
+                local chestList = game:GetService("Workspace"):GetChildren()
+                for _, v in ipairs(chestList) do
+                    if v.Name == "Chest1" or v.Name == "Chest2" or v.Name == "Chest3" then
+                        while v.Parent and getgenv().Auto_Chest do
+                            task.wait()
+                            xZcLuvHades(v.CFrame)
+                        end
+                    end
+                end
+
+                if getgenv().Hop_Server and getgenv().Auto_Chest then
+                    Hop()
+                end
+            end)
+
+            if not success then
+                warn("Error in Auto_Chest function: " .. errorMessage)
+            end
+        end
+    end
+end)
+
+spawn(function()
+	while wait() do
+		if getgenv().Auto_Chest then
+			getgenv().Auto_Chest = game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
+				if child.Name == 'ErrorPrompt' and child:FindFirstChild('MessageArea') and child.MessageArea:FindFirstChild("ErrorFrame") then
+					game:GetService("TeleportService"):Teleport(game.PlaceId)
+				end
+			end)
+		end
+	end
+end)
+-- ui
+local ScreenGui = Instance.new("ScreenGui")
+local afxbeo = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local UIGradient = Instance.new("UIGradient")
+local Time = Instance.new("TextLabel")
+local TenHub = Instance.new("TextLabel")
+local BELI = Instance.new("TextLabel")
+local Hop = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local UIStroke_2 = Instance.new("UIStroke")
+local UIGradient_2 = Instance.new("UIGradient")
+local Stop = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UIStroke_3 = Instance.new("UIStroke")
+local UIGradient_3 = Instance.new("UIGradient")
+local Cridet = Instance.new("TextLabel")
+
+afxbeo.Name = "afxbeo"
+afxbeo.Parent = ScreenGui
+afxbeo.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+afxbeo.BackgroundTransparency = 0.400
+afxbeo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+afxbeo.BorderSizePixel = 0
+afxbeo.Position = UDim2.new(0.19878684, 0, 0.196126744, 0)
+afxbeo.Size = UDim2.new(0, 441, 0, 218)
+
+UICorner.CornerRadius = UDim.new(0, 13)
+UICorner.Parent = afxbeo
+
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Thickness = 2
+UIStroke.Parent = afxbeo
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 85, 255)), ColorSequenceKeypoint.new(0.25, Color3.fromRGB(0, 255, 0)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 255, 0)), ColorSequenceKeypoint.new(0.75, Color3.fromRGB(0, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(170, 0, 0))}
+UIGradient.Parent = UIStroke
+
+Time.Name = "Time"
+Time.Parent = afxbeo
+Time.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Time.BackgroundTransparency = 1.000
+Time.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Time.BorderSizePixel = 0
+Time.Position = UDim2.new(0.0158730168, 0, 0.449541271, 0)
+Time.Size = UDim2.new(0, 428, 0, 54)
+Time.Font = Enum.Font.PatrickHand
+Time.Text = "Time Eslaped"
+Time.TextColor3 = Color3.fromRGB(0, 0, 0)
+Time.TextScaled = true
+Time.TextSize = 14.000
+Time.TextWrapped = true
+Time.TextXAlignment = Enum.TextXAlignment.Left
+
+TenHub.Name = "TenHub"
+TenHub.Parent = afxbeo
+TenHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TenHub.BackgroundTransparency = 1.000
+TenHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TenHub.BorderSizePixel = 0
+TenHub.Position = UDim2.new(0, 0, -0.0366972461, 0)
+TenHub.Size = UDim2.new(0, 441, 0, 64)
+TenHub.Font = Enum.Font.PatrickHand
+TenHub.Text = "Hub Name: AFX Hub | Credits: Afxcaxi Roblox"
+TenHub.TextColor3 = Color3.fromRGB(0, 0, 0)
+TenHub.TextSize = 35.000
+
+BELI.Name = "BELI"
+BELI.Parent = afxbeo
+BELI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BELI.BackgroundTransparency = 1.000
+BELI.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BELI.BorderSizePixel = 0
+BELI.Position = UDim2.new(0.0158730168, 0, 0.201834857, 0)
+BELI.Size = UDim2.new(0, 428, 0, 54)
+BELI.Font = Enum.Font.PatrickHand
+BELI.Text = "Current Beli"
+BELI.TextColor3 = Color3.fromRGB(0, 0, 0)
+BELI.TextScaled = true
+BELI.TextSize = 14.000
+BELI.TextWrapped = true
+BELI.TextXAlignment = Enum.TextXAlignment.Left
+
+Hop.Name = "Hop"
+Hop.Parent = afxbeo
+Hop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Hop.BackgroundTransparency = 0.950
+Hop.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Hop.BorderSizePixel = 0
+Hop.Position = UDim2.new(0.0294784587, 0, 0.697247684, 0)
+Hop.Size = UDim2.new(0, 200, 0, 50)
+Hop.Font = Enum.Font.PatrickHand
+Hop.Text = "Hop Sv"
+Hop.TextColor3 = Color3.fromRGB(0, 0, 0)
+Hop.TextSize = 30.000
+
+UICorner_2.CornerRadius = UDim.new(0, 15)
+UICorner_2.Parent = Hop
+
+UIStroke_2.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_2.Parent = Hop
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 85, 255)), ColorSequenceKeypoint.new(0.25, Color3.fromRGB(0, 255, 127)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 255, 0)), ColorSequenceKeypoint.new(0.75, Color3.fromRGB(85, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(170, 0, 0))}
+UIGradient_2.Parent = UIStroke_2
+
+Stop.Name = "Stop"
+Stop.Parent = afxbeo
+Stop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Stop.BackgroundTransparency = 0.950
+Stop.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Stop.BorderSizePixel = 0
+Stop.Position = UDim2.new(0.512471676, 0, 0.697247684, 0)
+Stop.Size = UDim2.new(0, 200, 0, 50)
+Stop.Font = Enum.Font.PatrickHand
+Stop.Text = "Stop Auto Chest"
+Stop.TextColor3 = Color3.fromRGB(0, 0, 0)
+Stop.TextSize = 30.000
+
+UICorner_3.CornerRadius = UDim.new(0, 15)
+UICorner_3.Parent = Stop
+
+UIStroke_3.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_3.Parent = Stop
+
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 85, 255)), ColorSequenceKeypoint.new(0.25, Color3.fromRGB(0, 255, 127)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 255, 0)), ColorSequenceKeypoint.new(0.75, Color3.fromRGB(85, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(170, 0, 0))}
+UIGradient_3.Parent = UIStroke_3
+
+Cridet.Name = "Cridet"
+Cridet.Parent = afxbeo
+Cridet.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cridet.BackgroundTransparency = 1.000
+Cridet.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Cridet.BorderSizePixel = 0
+Cridet.Position = UDim2.new(-0.0816326514, 0, 0.848623872, 0)
+Cridet.Size = UDim2.new(0, 200, 0, 50)
+Cridet.Font = Enum.Font.Unknown
+Cridet.Text = "Ui Design By Enverst"
+Cridet.TextColor3 = Color3.fromRGB(0, 0, 0)
+Cridet.TextSize = 20.000
+Stop.MouseButton1Down:Connect(function()
+    repeat task.wait()
+        getgenv().Auto_Chest = false
+    until getgenv().Auto_Chest == false
+end)
+Hop.MouseButton1Down:Connect(function()
+    Hop()
+end)
+function UpdateBeli()
+    BELI.Text = ("Current Beli:"..game:GetService("Players")["LocalPlayer"].Data.Beli.Value)
+end
+spawn(function()
+    while true do
+        wait(1)
+        TimeCount_S = TimeCount_S + 1
+        if TimeCount_S > 60 then
+            TimeCount_S = 0
+            TimeCount_M = TimeCount_M + 1
+        end
+        Time.Text = "Time Elapsed : "..TimeCount_M.." M - "..TimeCount_S.." S"
+    end
+    while wait() do
+        UpdateBeli()
+    end
+end)
+local function OSCPVU_fake_script()
+	local script = Instance.new('LocalScript', UIGradient)
+
+	local TweenService = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
+	local tween = TweenService:Create(script.Parent, tweeninfo, {Rotation = 360})
+	tween:Play()
+end
+coroutine.wrap(OSCPVU_fake_script)()
+local function LLWUZOX_fake_script()
+	local script = Instance.new('LocalScript', UIGradient_2)
+
+	local TweenService = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
+	local tween = TweenService:Create(script.Parent, tweeninfo, {Rotation = 360})
+	tween:Play()
+end
+coroutine.wrap(LLWUZOX_fake_script)()
+
