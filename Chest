@@ -116,7 +116,7 @@ ggez = function(suck)
 end
 
 xZcLuvHades = function(mydick)
-	for i = 2, 0 do
+	for i = 3, 0 do
 		ggez(mydick)
 		game.Players.LocalPlayer.Character.Humanoid:ChangeState(14)
 	end
