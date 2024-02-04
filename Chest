@@ -36,7 +36,7 @@ repeat
         warn("Error in SelectTeam function: " .. errorMessage)
     end
 
-    wait(.9)
+    wait(.1)
 until game.Players.LocalPlayer.Team ~= nil and game:IsLoaded()
 
 
@@ -116,7 +116,7 @@ ggez = function(suck)
 end
 
 xZcLuvHades = function(mydick)
-	for i = 1, 6 do
+	for i = 2, 0 do
 		ggez(mydick)
 		game.Players.LocalPlayer.Character.Humanoid:ChangeState(14)
 	end
