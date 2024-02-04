@@ -36,7 +36,7 @@ repeat
         warn("Error in SelectTeam function: " .. errorMessage)
     end
 
-    wait(.3)
+    wait(.2)
 until game.Players.LocalPlayer.Team ~= nil and game:IsLoaded()
 
 
@@ -166,7 +166,7 @@ spawn(function()
 	end
 end)
 -- ui
-
+local ScreenGui = Instance.new("ScreenGui")
 local AfxcaxiRoblox = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local UIStroke = Instance.new("UIStroke")
@@ -228,7 +228,7 @@ TenHub.BorderSizePixel = 0
 TenHub.Position = UDim2.new(0, 0, -0.0366972461, 0)
 TenHub.Size = UDim2.new(0, 441, 0, 64)
 TenHub.Font = Enum.Font.PatrickHand
-TenHub.Text = "Hub Name: AFX Hub | Credits: AfxcaxiRoblox"
+TenHub.Text = "Hub Name: AFX Hub | Credits: Afxcaxi Roblox"
 TenHub.TextColor3 = Color3.fromRGB(0, 0, 0)
 TenHub.TextSize = 35.000
 
