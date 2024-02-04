@@ -167,7 +167,7 @@ spawn(function()
 end)
 -- ui
 local ScreenGui = Instance.new("ScreenGui")
-local AfxcaxiRoblox = Instance.new("Frame")
+local afxbeo = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local UIStroke = Instance.new("UIStroke")
 local UIGradient = Instance.new("UIGradient")
@@ -184,27 +184,27 @@ local UIStroke_3 = Instance.new("UIStroke")
 local UIGradient_3 = Instance.new("UIGradient")
 local Cridet = Instance.new("TextLabel")
 
-AfxcaxiRoblox.Name = "AfxcaxiRoblox"
-AfxcaxiRoblox.Parent = game.StarterGui.ScreenGui
-AfxcaxiRoblox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-AfxcaxiRoblox.BackgroundTransparency = 0.400
-AfxcaxiRoblox.BorderColor3 = Color3.fromRGB(0, 0, 0)
-AfxcaxiRoblox.BorderSizePixel = 0
-AfxcaxiRoblox.Position = UDim2.new(0.19878684, 0, 0.196126744, 0)
-AfxcaxiRoblox.Size = UDim2.new(0, 441, 0, 218)
+afxbeo.Name = "afxbeo"
+afxbeo.Parent = game.StarterGui.ScreenGui
+afxbeo.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+afxbeo.BackgroundTransparency = 0.400
+afxbeo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+afxbeo.BorderSizePixel = 0
+afxbeo.Position = UDim2.new(0.19878684, 0, 0.196126744, 0)
+afxbeo.Size = UDim2.new(0, 441, 0, 218)
 
 UICorner.CornerRadius = UDim.new(0, 13)
-UICorner.Parent = AfxcaxiRoblox
+UICorner.Parent = afxbeo
 
 UIStroke.Color = Color3.fromRGB(255, 255, 255)
 UIStroke.Thickness = 2
-UIStroke.Parent = AfxcaxiRoblox
+UIStroke.Parent = afxbeo
 
 UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 85, 255)), ColorSequenceKeypoint.new(0.25, Color3.fromRGB(0, 255, 0)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 255, 0)), ColorSequenceKeypoint.new(0.75, Color3.fromRGB(0, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(170, 0, 0))}
 UIGradient.Parent = UIStroke
 
 Time.Name = "Time"
-Time.Parent = AfxcaxiRoblox
+Time.Parent = afxbeo
 Time.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Time.BackgroundTransparency = 1.000
 Time.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -220,7 +220,7 @@ Time.TextWrapped = true
 Time.TextXAlignment = Enum.TextXAlignment.Left
 
 TenHub.Name = "TenHub"
-TenHub.Parent = AfxcaxiRoblox
+TenHub.Parent = afxbeo
 TenHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TenHub.BackgroundTransparency = 1.000
 TenHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -233,7 +233,7 @@ TenHub.TextColor3 = Color3.fromRGB(0, 0, 0)
 TenHub.TextSize = 35.000
 
 BELI.Name = "BELI"
-BELI.Parent = AfxcaxiRoblox
+BELI.Parent = afxbeo
 BELI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 BELI.BackgroundTransparency = 1.000
 BELI.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -249,7 +249,7 @@ BELI.TextWrapped = true
 BELI.TextXAlignment = Enum.TextXAlignment.Left
 
 Hop.Name = "Hop"
-Hop.Parent = AfxcaxiRoblox
+Hop.Parent = afxbeo
 Hop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Hop.BackgroundTransparency = 0.950
 Hop.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -271,7 +271,7 @@ UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fr
 UIGradient_2.Parent = UIStroke_2
 
 Stop.Name = "Stop"
-Stop.Parent = AfxcaxiRoblox
+Stop.Parent = afxbeo
 Stop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Stop.BackgroundTransparency = 0.950
 Stop.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -293,7 +293,7 @@ UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fr
 UIGradient_3.Parent = UIStroke_3
 
 Cridet.Name = "Cridet"
-Cridet.Parent = AfxcaxiRoblox
+Cridet.Parent = afxbeo
 Cridet.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Cridet.BackgroundTransparency = 1.000
 Cridet.BorderColor3 = Color3.fromRGB(0, 0, 0)
