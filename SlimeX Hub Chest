@@ -66,7 +66,7 @@ if table.find(TablePlace,game.PlaceId) then
     else
     game.Players.LocalPlayer:Kick("Not Support This Game Or Not Support This Exploit, Please Try Again")
 end
-wait(.1)
+wait(.8)
 repeat wait()until game:IsLoaded()
     local a=false;
     local b=Instance.new("ScreenGui")
@@ -80,7 +80,7 @@ repeat wait()until game:IsLoaded()
     c.BorderSizePixel=0;
     c.Position=UDim2.new(0,0,0,0)
     c.Size=UDim2.new(0,150,0,150)
-    c.Image="http://www.roblox.com/asset/?id=12095230917"
+    c.Image="http://www.roblox.com/asset/?id=706308199"
     d.CornerRadius=UDim.new(0,16)
     d.Parent=c;
 
@@ -104,7 +104,7 @@ repeat wait()until game:IsLoaded()
             end 
         end)()
         c:TweenPosition(UDim2.new(0,2000,0,1000),Enum.EasingDirection.Out,Enum.EasingStyle.Linear,3,true)
-        wait(3)
+        wait(1)
         f=true;
         b:Destroy()
     end)
