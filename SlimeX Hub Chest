@@ -1,0 +1,9 @@
+if game.PlaceId == 2753915549 then
+    --// loadstring(game:HttpGet("https://raw.githubusercontent.com/Slimexiuem/Script-Paid/main/Auto-Chest-Slimex_Hub"))()
+elseif game.PlaceId == 4442272183 then
+    --// loadstring(game:HttpGet("https://raw.githubusercontent.com/Slimexiuem/Script-Paid/main/Auto-Chest-Slimex_Hub"))()
+elseif game.PlaceId == 7449423635 then
+    --// loadstring(game:HttpGet("https://raw.githubusercontent.com/Slimexiuem/Script-Paid/main/Auto-Chest-Slimex_Hub"))()
+else
+    game.Players.LocalPlayer:Kick("Not Support This Game Or Not Support This Exploit")
+end
