@@ -1,0 +1,3 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/afxcaxi/AnyHub/main/Slime"))()
+wait(.1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Slimexiuem/Script-Paid/main/Auto-Chest-Slimex_Hub"))()
